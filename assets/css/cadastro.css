@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif; 
+    background-color: #1C3C5E;
 }
 
 header {
@@ -9,6 +10,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #29517B;
 }
 
 header a {
@@ -45,4 +47,41 @@ header a {
 
 .menu li:first-child {
     margin-left: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+section {
+    text-align: center;
+    font-size: 2rem;
+    background-color: #29517B;
+    border-radius: 10px;
+    color: white;
+}
+
+form {
+
+}
+
+
+
+input[type="text"],
+input[type="date"],
+button {
+    border-radius: 5px;
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+button {
+    
 }
