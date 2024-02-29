@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; 
+}
+
+header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu .cadastro a {
+    padding: 15px 18px; 
+    background-color: #F08950;
+    border-radius: 20px; 
+    text-decoration: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.61);
+}
+
+.menu .cadastro a:hover {
+    background-color: #ec5f12;
+}
+.logo img {
+    width: 75px;
+    height: auto;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu li:first-child {
+    margin-left: 0;
+}
+
+
+
+
+section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 10px;
+    border: none;
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+.image-grid {
+    display: flex;
+    justify-content: center;
+}
+
+.column {
+    margin: 0 10px;
+}
+
+.column img {
+    width: 100px;
+    height: 100px;
+}
+
+.column p {
+    margin-top: 10px;
+    font-weight: bold;
+}
