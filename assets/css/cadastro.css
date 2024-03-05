@@ -52,10 +52,11 @@ header a {
 /* ---------------------------------------------------------- */
 
 main {
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    /* height: 80vh; */
 }
 
 section {
@@ -71,6 +72,7 @@ section {
 .content {
     display: flex;
 }
+
 
 .right-column {
     flex: 1;
