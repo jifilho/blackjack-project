@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; 
+    background-color: #1C3C5E;
+}
+
+header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #29517B;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu .cadastro a {
+    padding: 15px 18px; 
+    background-color: #F08950;
+    border-radius: 20px; 
+    text-decoration: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.61);
+}
+
+.menu .cadastro a:hover {
+    background-color: #ec5f12;
+}
+.logo img {
+    width: 75px;
+    height: auto;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu li:first-child {
+    margin-left: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+section {
+    text-align: center;
+    font-size: 2rem;
+    background-color: #29517B;
+    border-radius: 10px;
+    color: white;
+}
+
+form {
+
+}
+
+
+
+input[type="text"],
+input[type="date"],
+button {
+    border-radius: 5px;
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+button {
+    
+}
