@@ -65,8 +65,7 @@ section {
     background-color: #29517B;
     border-radius: 10px;
     color: white;
-    display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .content {
@@ -75,15 +74,15 @@ section {
 
 
 .right-column {
-    flex: 1;
+    /* flex: 1; */
     padding-left: 20px;
     padding-right: 20px;
 }
 
-.left-column,
+/* .left-column,
 .right-column {
     flex-basis: 100%; 
-}
+} */
 
 .title-container {
     display: flex;
@@ -104,7 +103,7 @@ section {
 
 
 a {
-    color: inherit;
+    /* color: inherit; */
     text-decoration: none; 
 }
 
