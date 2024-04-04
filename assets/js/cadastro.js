@@ -89,7 +89,6 @@ myForm.addEventListener("submit", (evento) => {
         "\n\nCadastro Feito com sucesso!"
     );
 
-    // Limpa os campos do formulário
     const campos = ["cpf", "nome", "sobrenome", "data_nascimento", "senha"];
     campos.forEach((campo) => {
       document.getElementById(campo).value = "";
