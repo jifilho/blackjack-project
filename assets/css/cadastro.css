@@ -185,8 +185,9 @@ button:hover {
 
 
 .modal-content {
+    display: block;
     background-color: #fff;
-    padding: 20px;
+    padding: 50px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
@@ -196,8 +197,9 @@ button:hover {
 }
 
 .modal-content input {
-    width: auto;
+    width: 100%;
 }
+
 
 #overlay {
     display: none;
@@ -210,4 +212,11 @@ button:hover {
     z-index: 1;
 }
 
+.error {
+    border-color: red;
+}
+
+.correct {
+    border-color: green;
+}
 
