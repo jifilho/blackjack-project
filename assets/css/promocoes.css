@@ -52,7 +52,7 @@ header a {
 }
 
 main {
-    margin-top: 200px;
+
     text-align: center;
     /* margin: 0 auto; */
 
@@ -126,4 +126,9 @@ footer {
 .main-section li a { 
     text-decoration: none;
     color: white;
+}
+
+section img {
+    width: 100%;
+    /* object-fit: cover; */
 }
