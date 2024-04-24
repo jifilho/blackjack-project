@@ -53,6 +53,10 @@ nomeInput.addEventListener("blur", () => {
   if (nomeInput.value.trim() !== "") {
     addRemErro(nomeInput, nomeInput.value.length < 3, "nomeError", "Seu nome deve ter mais de 3 caracteres.");
   }
+nomeInput.addEventListener("blur", () => {
+  if (nomeInput.value.trim() !== "") {
+    addRemErro(nomeInput, nomeInput.value.length < 3, "nomeError", "Seu nome deve ter mais de 3 caracteres.");
+  }
 });
 sobrenomeInput.addEventListener("blur", () => {
   if (sobrenomeInput.value.trim() !== ""){
@@ -73,6 +77,10 @@ cpfInput.addEventListener("input", () => {
   }
 });
 
+senhaInput.addEventListener("blur", () => {
+  if(senhaInput.value.trim() !== ""){
+  addRemErro(senhaInput, senhaInput.value.length < 6, "senhaError", "Senha tem que ter mais de 6 caracteres");
+  }
 senhaInput.addEventListener("blur", () => {
   if(senhaInput.value.trim() !== ""){
   addRemErro(senhaInput, senhaInput.value.length < 6, "senhaError", "Senha tem que ter mais de 6 caracteres");
