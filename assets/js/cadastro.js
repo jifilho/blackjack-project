@@ -16,17 +16,19 @@ function fecharModal() {
 
 function addRemErro(campo, condicao, mensagemId, mensagem) {
   const mensagemErro = document.getElementById(mensagemId);
-  if (condicao) {
-    campo.classList.remove("correct");
-    campo.classList.add("error");
-    mensagemErro.textContent = mensagem;
-    mensagemErro.style.display = "block";
-    mensagemErro.style.color = "red"; // Estilo da mensagem de erro
-  } else {
-    campo.classList.add("correct");
-    campo.classList.remove("error");
-    mensagemErro.textContent = ""; 
-    mensagemErro.style.display = "none";
+  if (mensagemErro) { 
+    if (condicao) {
+      campo.classList.remove("correct");
+      campo.classList.add("error");
+      mensagemErro.textContent = mensagem;
+      mensagemErro.style.display = "block";
+      mensagemErro.style.color = "red";
+    } else {
+      campo.classList.add("correct");
+      campo.classList.remove("error");
+      mensagemErro.textContent = ""; 
+      mensagemErro.style.display = "none";
+    }
   }
 }
 
@@ -61,6 +63,13 @@ sobrenomeInput.addEventListener("blur", () => {
 cpfInput.addEventListener("blur", () => {
   if (cpfInput.value.trim() !== ""){
   addRemErro(cpfInput, cpfInput.value.length < 11, "cpfError", "CPF tem que ter mais de 11 caracteres");
+  }
+});
+cpfInput.addEventListener("input", () => {
+  cpfInput.value = cpfInput.value.replace(/\D/g, '');
+
+    if (cpfInput.value.length > 11) {
+    cpfInput.value = cpfInput.value.slice(0, 11);
   }
 });
 
