@@ -14,13 +14,19 @@ function fecharModal() {
   overlay.style.display = "none";
 }
 
-function addRemErro(campo, condicao) {
+function addRemErro(campo, condicao, mensagemId, mensagem) {
+  const mensagemErro = document.getElementById(mensagemId);
   if (condicao) {
-    campo.classList.remove("correct")
+    campo.classList.remove("correct");
     campo.classList.add("error");
+    mensagemErro.textContent = mensagem;
+    mensagemErro.style.display = "block";
+    mensagemErro.style.color = "red"; // Estilo da mensagem de erro
   } else {
-    campo.classList.add("correct")
+    campo.classList.add("correct");
     campo.classList.remove("error");
+    mensagemErro.textContent = ""; 
+    mensagemErro.style.display = "none";
   }
 }
 
@@ -41,19 +47,27 @@ const cpfInput = document.getElementById("cpf");
 const sobrenomeInput = document.getElementById("sobrenome");
 const senhaInput = document.getElementById("senha");
 
-nomeInput.addEventListener("input", () => {
-  addRemErro(nomeInput, nomeInput.value.length < 3);
+nomeInput.addEventListener("blur", () => {
+  if (nomeInput.value.trim() !== "") {
+    addRemErro(nomeInput, nomeInput.value.length < 3, "nomeError", "Seu nome deve ter mais de 3 caracteres.");
+  }
 });
-sobrenomeInput.addEventListener("input", () => {
-  addRemErro(sobrenomeInput, sobrenomeInput.value.length < 3);
+sobrenomeInput.addEventListener("blur", () => {
+  if (sobrenomeInput.value.trim() !== ""){
+  addRemErro(sobrenomeInput, sobrenomeInput.value.length < 3, "sobrenomeError", "Sobrenome tem que ter mais de 3 caracteres");  
+  }
 });
 
-cpfInput.addEventListener("input", () => {
-  addRemErro(cpfInput, cpfInput.value.length < 11);
+cpfInput.addEventListener("blur", () => {
+  if (cpfInput.value.trim() !== ""){
+  addRemErro(cpfInput, cpfInput.value.length < 11, "cpfError", "CPF tem que ter mais de 11 caracteres");
+  }
 });
 
-senhaInput.addEventListener("input", () => {
-  addRemErro(senhaInput, senhaInput.value.length < 6);
+senhaInput.addEventListener("blur", () => {
+  if(senhaInput.value.trim() !== ""){
+  addRemErro(senhaInput, senhaInput.value.length < 6, "senhaError", "Senha tem que ter mais de 6 caracteres");
+  }
 });
 
 myForm.addEventListener("submit", (evento) => {
