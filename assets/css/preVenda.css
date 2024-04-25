@@ -113,3 +113,47 @@ section {
     font-size: 0.8rem;
     text-align: center;
 }
+
+footer {
+    display: flex;
+    background-color: #29517B;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.column h3 {
+    margin-top: 0;
+}
+
+.column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.column ul li {
+    margin-bottom: 10px;
+}
+
+.main-section {
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.main-section li a { 
+    text-decoration: none;
+    color: white;
+}
+
+section img {
+    width: 100%;
+    /* object-fit: cover; */
+}
+
+.atencao {
+    background-color: #29517B;
+    text-align: center;
+}
