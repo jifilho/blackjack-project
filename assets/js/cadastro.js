@@ -51,18 +51,18 @@ const senhaInput = document.getElementById("senha");
 
 nomeInput.addEventListener("blur", () => {
   if (nomeInput.value.trim() !== "") {
-    addRemErro(nomeInput, nomeInput.value.length < 3, "nomeError", "Seu nome deve ter mais de 3 caracteres.");
+    addRemErro(nomeInput, nomeInput.value.length < 3, "nomeError", "Seu nome deve ter pelo menos 3 caracteres.");
   }
 });
 sobrenomeInput.addEventListener("blur", () => {
   if (sobrenomeInput.value.trim() !== ""){
-  addRemErro(sobrenomeInput, sobrenomeInput.value.length < 3, "sobrenomeError", "Sobrenome deve ter mais de 3 caracteres");  
+  addRemErro(sobrenomeInput, sobrenomeInput.value.length < 3, "sobrenomeError", "Sobrenome deve ter pelo menos 3 caracteres");  
   }
 });
 
 cpfInput.addEventListener("blur", () => {
   if (cpfInput.value.trim() !== ""){
-  addRemErro(cpfInput, cpfInput.value.length < 11, "cpfError", "CPF deve ter mais de 11 caracteres");
+  addRemErro(cpfInput, cpfInput.value.length < 11, "cpfError", "CPF deve ter 11 caracteres");
   }
 });
 cpfInput.addEventListener("input", () => {
@@ -75,7 +75,7 @@ cpfInput.addEventListener("input", () => {
 
 senhaInput.addEventListener("blur", () => {
   if(senhaInput.value.trim() !== ""){
-  addRemErro(senhaInput, senhaInput.value.length < 6, "senhaError", "Senha deve ter mais de 6 caracteres");
+  addRemErro(senhaInput, senhaInput.value.length < 6, "senhaError", "Senha deve ter pelo menos 6 caracteres");
   }
 });
 
