@@ -137,12 +137,6 @@ label {
 
 }
 
-/* div:focus-within > label {
-    font-size: 18pt;
-    font-weight: bolder;
-    color: #fff;
-} */
-
 input[type="password"],
 input[type="text"],
 input[type="date"],
@@ -158,9 +152,7 @@ button {
     font-weight: bold;
 }
 
-/* input[type="date"] {
-    font-size: 20pt; 
-} */
+
 
 button {
     background-color: #F08950;

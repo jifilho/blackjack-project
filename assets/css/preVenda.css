@@ -117,6 +117,7 @@ section {
 footer {
     display: flex;
     background-color: #29517B;
+    text-align: center;
 }
 
 .column {
