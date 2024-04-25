@@ -56,13 +56,13 @@ nomeInput.addEventListener("blur", () => {
 });
 sobrenomeInput.addEventListener("blur", () => {
   if (sobrenomeInput.value.trim() !== ""){
-  addRemErro(sobrenomeInput, sobrenomeInput.value.length < 3, "sobrenomeError", "Sobrenome tem que ter mais de 3 caracteres");  
+  addRemErro(sobrenomeInput, sobrenomeInput.value.length < 3, "sobrenomeError", "Sobrenome deve ter mais de 3 caracteres");  
   }
 });
 
 cpfInput.addEventListener("blur", () => {
   if (cpfInput.value.trim() !== ""){
-  addRemErro(cpfInput, cpfInput.value.length < 11, "cpfError", "CPF tem que ter mais de 11 caracteres");
+  addRemErro(cpfInput, cpfInput.value.length < 11, "cpfError", "CPF deve ter mais de 11 caracteres");
   }
 });
 cpfInput.addEventListener("input", () => {
@@ -75,7 +75,7 @@ cpfInput.addEventListener("input", () => {
 
 senhaInput.addEventListener("blur", () => {
   if(senhaInput.value.trim() !== ""){
-  addRemErro(senhaInput, senhaInput.value.length < 6, "senhaError", "Senha tem que ter mais de 6 caracteres");
+  addRemErro(senhaInput, senhaInput.value.length < 6, "senhaError", "Senha deve ter mais de 6 caracteres");
   }
 });
 
