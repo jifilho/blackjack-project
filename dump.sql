@@ -34,7 +34,33 @@ CREATE TABLE RegistroAcesso (
 
 
 -- ADICIONANDO DADOS NO CURSO --
+-- Inserindo dados na tabela Usuario
+INSERT INTO Usuario (nome_usuario, email, senha)
+VALUES 
+('João Silva', 'joao.silva@email.com', 'senha123'),
+('Maria Santos', 'maria.santos@email.com', 'senha456'),
+('Pedro Costa', 'pedro.costa@email.com', 'senha789')
 
+-- Inserindo dados na tabela Sessao
+INSERT INTO Sessao (usuario_id, data_logout)
+VALUES 
+(1, '2024-04-26 22:00:00'),
+(2, '2024-04-27 22:00:00'),
+(3, '2024-04-28 22:00:00')
+
+-- Inserindo dados na tabela Token
+INSERT INTO Token (usuario_id, token_auth, data_expiracao)
+VALUES 
+(1, 'abc123', '2024-05-26 00:00:00'),
+(2, 'def456', '2024-05-27 00:00:00'),
+(3, 'ghi789', '2024-05-28 00:00:00')
+
+-- Inserindo dados na tabela RegistroAcesso
+INSERT INTO RegistroAcesso (usuario_id, sucesso, endereco_ip)
+VALUES 
+(1, true, '192.168.0.1'),
+(2, false, '192.168.0.2'),
+(3, true, '192.168.0.3')
 
 -- MODELO ENTIDADE RELACIONAMENTO --
 Entidade: Usuário
