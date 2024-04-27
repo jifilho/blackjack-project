@@ -61,6 +61,7 @@ main {
 }
 
 h1 {
+    color: white;
     position: relative;
     display: inline-block;
 }
