@@ -23,14 +23,13 @@ CREATE TABLE Token (
     data_expiracao TIMESTAMP NOT NULL
 );
 
--- Tabela Registro de Acesso
-CREATE TABLE RegistroAcesso (
-    registro_id SERIAL PRIMARY KEY,
-    usuario_id INTEGER REFERENCES Usuario(usuario_id),
-    data_acesso TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    sucesso BOOLEAN NOT NULL,
-    endereco_ip VARCHAR(50) NOT NULL
-);
+-- Tabela Jogos
+CREATE TABLE jogos (
+  jogo_id SERIAL PRIMARY KEY,
+    nome_jogo VARCHAR(255) UNIQUE NOT NULL,
+    ano_criacao int,
+    empresa_jogo VARCHAR(255)
+ );
 
 
 -- ADICIONANDO DADOS NO CURSO --
@@ -55,35 +54,9 @@ VALUES
 (2, 'def456', '2024-05-27 00:00:00'),
 (3, 'ghi789', '2024-05-28 00:00:00')
 
--- Inserindo dados na tabela RegistroAcesso
-INSERT INTO RegistroAcesso (usuario_id, sucesso, endereco_ip)
+-- Inserindo dados na tabela jogos
+INSERT INTO jogos (jogo_id, nome_jogo, ano_criacao, empresa_jogo)
 VALUES 
-(1, true, '192.168.0.1'),
-(2, false, '192.168.0.2'),
-(3, true, '192.168.0.3')
-
--- MODELO ENTIDADE RELACIONAMENTO --
-Entidade: Usuário
-ID do Usuário (PK)
-Nome de Usuário
-Email
-Senha
-
-Entidade: Sessão
-ID da Sessão (PK)
-ID do Usuário (FK)
-Data e Hora do Login
-Data e Hora do Logout (pode ser NULL se a sessão estiver ativa)
-
-Entidade: Token
-ID do Token (PK)
-ID do Usuário (FK)
-Token de Autenticação
-Data de Expiração do Token
-
-Entidade: Registro de Acesso
-ID do Registro (PK)
-ID do Usuário (FK)
-Data e Hora do Acesso
-Sucesso (booleano, indicando se o acesso foi bem-sucedido ou não)
-Endereço IP do Acesso
+(1, 'blackjack', 1970,'pokerstars'),
+(2, 'poker', 1999,'pokerstars'),
+(3, 'tigrinho', 2020,'pragmatic')
