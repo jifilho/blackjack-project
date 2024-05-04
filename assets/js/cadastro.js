@@ -37,8 +37,6 @@ loginLink.addEventListener("click", abrirModal);
 document.addEventListener("keyup", (evento) => {
   if (evento.key === "Escape") {
     fecharModal();
-  } else {
-    console.log("Houve uma falha! ");
   }
 });
 
@@ -46,7 +44,7 @@ spanClose.onclick = fecharModal;
 
 const nomeInput = document.getElementById("nome");
 const cpfInput = document.getElementById("cpf");
-const sobrenomeInput = document.getElementById("sobrenome");
+const emailInput = document.getElementById("email");
 const senhaInput = document.getElementById("senha");
 
 nomeInput.addEventListener("blur", () => {
@@ -54,9 +52,9 @@ nomeInput.addEventListener("blur", () => {
     addRemErro(nomeInput, nomeInput.value.length < 3, "nomeError", "Seu nome deve ter pelo menos 3 caracteres.");
   }
 });
-sobrenomeInput.addEventListener("blur", () => {
-  if (sobrenomeInput.value.trim() !== ""){
-  addRemErro(sobrenomeInput, sobrenomeInput.value.length < 3, "sobrenomeError", "Sobrenome deve ter pelo menos 3 caracteres");  
+emailInput.addEventListener("change", () => {
+  if (emailInput.value.trim() !== ""){
+  addRemErro(emailInput, !emailInput.value.includes('@'), "emailError", "O email deve conter '@'");  
   }
 });
 
@@ -85,13 +83,13 @@ myForm.addEventListener("submit", (evento) => {
   const dataNascimentoInput = document.getElementById("data_nascimento");
 
   addRemErro(nomeInput, nomeInput.value.length < 3);
-  addRemErro(sobrenomeInput, sobrenomeInput.value.length < 3);
+  // addRemErro(sobrenomeInput, sobrenomeInput.value.length < 3);
   addRemErro(cpfInput, cpfInput.value.length < 11);
   addRemErro(senhaInput, senhaInput.value.length < 6);
 
   if (
     nomeInput.classList.contains("error") ||
-    sobrenomeInput.classList.contains("error") ||
+    // sobrenomeInput.classList.contains("error") ||
     cpfInput.classList.contains("error") ||
     senhaInput.classList.contains("error")
   ) {
@@ -102,8 +100,8 @@ myForm.addEventListener("submit", (evento) => {
         cpfInput.value +
         "\nNome: " +
         nomeInput.value +
-        "\nSobrenome: " +
-        sobrenomeInput.value +
+        "\nEmail: " +
+        emailInput.value +
         "\nData de Nascimento: " +
         dataNascimentoInput.value +
         "\nSenha: " +
@@ -112,7 +110,7 @@ myForm.addEventListener("submit", (evento) => {
         "\n\nCadastro Feito com sucesso!"
     );
 
-    const campos = ["cpf", "nome", "sobrenome", "data_nascimento", "senha"];
+    const campos = ["cpf", "nome", "email", "data_nascimento", "senha"];
     campos.forEach((campo) => {
       document.getElementById(campo).value = "";
     });
