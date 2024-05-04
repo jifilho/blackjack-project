@@ -32,6 +32,13 @@ function addRemErro(campo, condicao, mensagemId, mensagem) {
   }
 }
 
+function limparClasses() {
+  const campos = document.querySelectorAll("#myForm input");
+  campos.forEach((campo) => {
+    campo.classList.remove("correct")
+  })
+}
+
 loginLink.addEventListener("click", abrirModal);
 
 document.addEventListener("keyup", (evento) => {
@@ -83,13 +90,13 @@ myForm.addEventListener("submit", (evento) => {
   const dataNascimentoInput = document.getElementById("data_nascimento");
 
   addRemErro(nomeInput, nomeInput.value.length < 3);
-  // addRemErro(sobrenomeInput, sobrenomeInput.value.length < 3);
+  addRemErro(emailInput, !emailInput.value.includes('@'));
   addRemErro(cpfInput, cpfInput.value.length < 11);
   addRemErro(senhaInput, senhaInput.value.length < 6);
 
   if (
     nomeInput.classList.contains("error") ||
-    // sobrenomeInput.classList.contains("error") ||
+    emailInput.classList.contains("error") ||
     cpfInput.classList.contains("error") ||
     senhaInput.classList.contains("error")
   ) {
@@ -110,6 +117,8 @@ myForm.addEventListener("submit", (evento) => {
         "\n\nCadastro Feito com sucesso!"
     );
 
+    limparClasses();
+    
     const campos = ["cpf", "nome", "email", "data_nascimento", "senha"];
     campos.forEach((campo) => {
       document.getElementById(campo).value = "";
