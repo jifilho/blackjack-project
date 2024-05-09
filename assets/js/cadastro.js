@@ -61,7 +61,7 @@ nomeInput.addEventListener("blur", () => {
 });
 emailInput.addEventListener("change", () => {
   if (emailInput.value.trim() !== ""){
-  addRemErro(emailInput, !emailInput.value.includes('@'), "emailError", "O email deve conter '@'");  
+    addRemErro(emailInput, !(emailInput.value.includes('@') && emailInput.value.includes('.com')), "emailError", "O email deve conter '@' e '.com'"); 
   }
 });
 
